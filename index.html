@@ -47,13 +47,22 @@
         }
 
         /* YouTube video section */
-        .videos iframe {
-            width: 100%;
+        .video-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .video {
+            flex: 1 1 500px; /* grow/shrink with a base size */
             max-width: 560px;
-            height: 315px;
-            margin-bottom: 1.5rem;
+            aspect-ratio: 16 / 9; /* keep video ratio */
+        }
+
+        .video iframe {
+            width: 100%;
+            height: 100%;
             border: none;
-            border-radius: 8px;
         }
 
         /* Blog section */
@@ -89,7 +98,7 @@
                 </p>
             </div>
             <div class="column">
-                <img src="Cover Page.jpg" alt="Description" width="400">
+                <img src="Cover Page.jpg" alt="Description" style="border: 1px solid #000;" width="400">
             </div>
         </section>
         <section style="text-align:center; margin: 2rem 0;">
@@ -113,16 +122,16 @@
         <!-- YouTube Videos Section -->
         <section class="videos">
             <h2>Featured Videos</h2>
-            <div class="video-container">
-                <div class="video">
-                    <iframe src="https://www.youtube.com/embed/c5IHmGuPxC4" width="560" height="315" 
-                        frameborder="0" allowfullscreen></iframe>
+                <div class="video-container">
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/c5IHmGuPxC4" 
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/J3fJqQ7ebSw" 
+                            allowfullscreen></iframe>
+                    </div>
                 </div>
-                <div class="video">
-                    <iframe src="https://www.youtube.com/embed/J3fJqQ7ebSw" width="560" height="315" 
-                        frameborder="0" allowfullscreen></iframe>
-                </div>
-            </div>
         </section>
 
         <!-- Blog Section -->
